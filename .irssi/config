@@ -1,11 +1,6 @@
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
-  { 
-    address = "chat.freenode.net";
-    chatnet = "Freenode";
-    port = "6667";
-  },
   { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
   { 
     address = "irc.undernet.org";
@@ -27,7 +22,15 @@ servers = (
   { address = "irc.webchat.org"; chatnet = "WebChat"; port = "6667"; },
   { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
   { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
-  { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; }
+  { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
+  {
+    address = "chat.freenode.net";
+    chatnet = "Freenode";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_cert = "~/.irssi/tanaro.pem";
+    autoconnect = "no";
+  }
 );
 
 chatnets = {
@@ -104,7 +107,7 @@ chatnets = {
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#debian"; chatnet = "Freenode"; autojoin = "No"; }
+  { name = "#debian"; chatnet = "Freenode"; autojoin = "no"; }
 );
 
 aliases = {
@@ -269,11 +272,7 @@ statusbar = {
   };
 };
 settings = {
-  core = {
-    real_name = "Stefan"; 
-    user_name = "stefan";
-    nick = "tanaro";
-  };
+  core = { real_name = "Stefan"; user_name = "stefan"; nick = "tanaro"; };
   "fe-text" = { actlist_sort = "refnum"; term_force_colors = "yes"; };
   "fe-common/core" = {
     autocreate_own_query = "no";
@@ -285,6 +284,5 @@ settings = {
     show_nickmode = "yes";
     autocreate_windows = "yes";
   };
-  "irc/core" = { alternate_nick = "naro"; };
+  "irc/core" = { alternate_nick = "tnaro"; };
 };
-hilights = ( { text = "nick"; nick = "yes"; word = "yes"; } );
