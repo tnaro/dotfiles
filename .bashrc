@@ -11,3 +11,6 @@ PS1='[\u@\h \W]\$ '
 
 alias vi="vim"
 alias findmove="find -mindepth 2 -type f -print -exec mv {} . \;"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
