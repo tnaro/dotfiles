@@ -21,6 +21,7 @@ filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 autocmd FileType make setlocal noexpandtab
 " In Ruby files, use 2 spaces instead of 4 for tabs
 autocmd FileType ruby setlocal sw=2 ts=2 sts=2
+autocmd FileType python setlocal sw=2 ts=2 sts=2
 
 " Enable omnicompletion (to use, hold Ctrl+X then Ctrl+O while in Insert mode.
 set ofu=syntaxcomplete#Complete
@@ -33,15 +34,15 @@ syntax enable             " enable syntax highlighting (previously syntax on).
 "colorscheme molokai       " set colorscheme
 
 " Prettify JSON files
-"autocmd BufRead,BufNewFile *.json set filetype=json
-"autocmd Syntax json sou ~/.vim/syntax/json.vim
+autocmd BufRead,BufNewFile *.json set filetype=json
+autocmd Syntax json sou ~/.vim/syntax/json.vim
 
 " Prettify Vagrantfile
 "autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 
 " Highlight characters that go over 80 columns
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 04. Vim UI                                                                 "
@@ -61,7 +62,7 @@ set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set autoindent            " auto-indent
 set tabstop=4             " tab spacing
-"set softtabstop=4         " unify
+set softtabstop=4         " unify
 set shiftwidth=4          " indent/outdent by 4 columns
 set shiftround            " always indent/outdent to the nearest tabstop
 set expandtab             " use spaces instead of tabs
