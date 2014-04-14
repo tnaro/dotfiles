@@ -14,8 +14,9 @@ ZSH_THEME="gallifrey"
 alias vi="vim"
 alias findmove="find -mindepth 2 -type f -print -exec mv {} . \;"
 alias kc="ssh stefan@88.198.125.126"
-alias syncinfo="watch grep -e Dirty: -e Writeback: /proc/meminfo"
+alias syncinfo="watch -n 0.5 grep -e Dirty: -e Writeback: /proc/meminfo"
 alias runjd="nohup ~/jd.sh & > /dev/null"
+alias ls='ls --color=auto -Fhx --group-directories-first '
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
