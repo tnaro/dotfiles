@@ -108,7 +108,7 @@ channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#debian"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#python"; chatnet = "freenode"; autojoin = "yes"; },
+  #{ name = "#python"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#fedora"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#vmware"; chatnet = "freenode"; autojoin = "yes"; }
 );
@@ -289,3 +289,10 @@ settings = {
   };
   "irc/core" = { alternate_nick = "tnaro"; };
 };
+ignores = (
+  {
+    level = "JOINS PARTS QUITS";
+    channels = ( "#debian", "#fedora", "#vmware" );
+  },
+  { level = "JOINS PARTS QUITS"; channels = ( "#android" ); }
+);

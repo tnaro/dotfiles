@@ -21,7 +21,7 @@ filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 autocmd FileType make setlocal noexpandtab
 " In Ruby files, use 2 spaces instead of 4 for tabs
 autocmd FileType ruby setlocal sw=2 ts=2 sts=2
-autocmd FileType python setlocal sw=2 ts=2 sts=2
+"autocmd FileType python setlocal sw=2 ts=2 sts=2
 
 " Enable omnicompletion (to use, hold Ctrl+X then Ctrl+O while in Insert mode.
 set ofu=syntaxcomplete#Complete
@@ -55,7 +55,7 @@ set incsearch             " But do highlight as you type your search.
 set ignorecase            " Make searches case-insensitive.
 set ruler                 " Always show info along bottom.
 set showmatch
-set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
+"set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 05. Text Formatting/Layout                                                 "
@@ -69,3 +69,9 @@ set expandtab             " use spaces instead of tabs
 "set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 set clipboard=unnamedplus
+
+" Plugins / Pathogen
+execute pathogen#infect()
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_haskell_checkers = ['hlint']
+let g:Powerline_symbols = "fancy"
