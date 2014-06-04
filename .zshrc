@@ -19,6 +19,7 @@ alias jd="nohup ~/jd.sh & > /dev/null"
 alias ls='ls --color=auto -Fhx --group-directories-first '
 alias fb='nohup ~/FileBot_4.1.jar & > /dev/null'
 alias flux="~/xflux -l 51.06166 -g 6.91658"
+alias ddinfo="sudo watch -n 1 killall -USR1 dd"
 
 function lto() {
     latex $1.tex
