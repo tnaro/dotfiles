@@ -75,3 +75,7 @@ execute pathogen#infect()
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_haskell_checkers = ['hlint']
 let g:Powerline_symbols = "fancy"
+
+" vim latex
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
