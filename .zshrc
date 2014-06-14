@@ -20,7 +20,7 @@ alias ls='ls --color=auto -Fhx --group-directories-first '
 alias fb='nohup ~/FileBot_4.1.jar & > /dev/null'
 alias flux="~/xflux -l 51.06166 -g 6.91658"
 alias ddinfo="sudo watch -n 1 killall -USR1 dd"
-alias rshift="redshift -l  51.1:6.9 -t 5700:3300 -m randr &"
+alias rshift="nohup redshift -l  51.1:6.9 -t 5700:3300 -m randr & > /dev/null"
 
 function lto() {
     latex $1.tex
