@@ -2,7 +2,7 @@ URxvt.scrollBar: false
 !URxvt.font: xft:DejavuSansMono:size=10
 URxvt.secondaryScroll: false
 !URxvt.tabbed.scrollBar: false
-URxvt.font: xft:Inconsolata:size=12
+URxvt.font: xft:Inconsolata:size=10
 URxvt*background: #000010
 URxvt*foreground: Wheat
 URxvt*cursorColor: magenta
