@@ -111,6 +111,7 @@ channels = (
   #{ name = "#python"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#fedora"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#vmware"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
