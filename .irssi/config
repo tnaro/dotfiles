@@ -293,7 +293,7 @@ settings = {
 ignores = (
   {
     level = "JOINS PARTS QUITS";
-    channels = ( "#debian", "#fedora", "#vmware" );
+    channels = ( "#debian", "#fedora", "#vmware", "#archlinux" );
   },
   { level = "JOINS PARTS QUITS"; channels = ( "#android" ); }
 );
