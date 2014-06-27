@@ -17,7 +17,7 @@ alias kc="ssh stefan@88.198.125.126"
 alias syncinfo="watch -n 0.5 grep -e Dirty: -e Writeback: /proc/meminfo"
 alias jd="nohup ~/jd.sh & > /dev/null"
 alias ls='ls --color=auto -Fhx --group-directories-first '
-alias fb='nohup ~/FileBot_4.1.jar & > /dev/null'
+alias fb='nohup java -jar ~/FileBot_4.1.jar & > /dev/null'
 alias flux="~/xflux -l 51.06166 -g 6.91658"
 alias ddinfo="sudo watch -n 1 killall -USR1 dd"
 alias rshift="nohup redshift -l  51.1:6.9 -t 5700:3300 -m randr & > /dev/null"
