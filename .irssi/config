@@ -111,6 +111,7 @@ channels = (
   #{ name = "#python"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#fedora"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#vmware"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -292,7 +293,7 @@ settings = {
 ignores = (
   {
     level = "JOINS PARTS QUITS";
-    channels = ( "#debian", "#fedora", "#vmware" );
+    channels = ( "#debian", "#fedora", "#vmware", "#archlinux" );
   },
   { level = "JOINS PARTS QUITS"; channels = ( "#android" ); }
 );
