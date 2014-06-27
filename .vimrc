@@ -79,3 +79,6 @@ let g:Powerline_symbols = "fancy"
 " vim latex
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
+
+" NERDtree
+map <C-n> :NERDTreeToggle<CR>
