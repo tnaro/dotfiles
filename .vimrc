@@ -56,6 +56,9 @@ set ignorecase            " Make searches case-insensitive.
 set ruler                 " Always show info along bottom.
 set showmatch
 "set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
+set relativenumber        " Relative Numbers
+set number                " But show the current instead of 0
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 05. Text Formatting/Layout                                                 "
@@ -69,6 +72,8 @@ set expandtab             " use spaces instead of tabs
 "set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 set clipboard=unnamedplus
+set showcmd
+
 
 " Plugins / Pathogen
 execute pathogen#infect()
@@ -82,3 +87,9 @@ let g:tex_flavor = "latex"
 
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
+
+" forgot to sudo
+cnoremap w!! w !sudo tee % >/dev/null
+
+" better exit from insert mode
+inoremap jk <esc>
