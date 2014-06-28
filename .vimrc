@@ -31,7 +31,8 @@ set ofu=syntaxcomplete#Complete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
-"colorscheme molokai       " set colorscheme
+"colorscheme solarized     " set colorscheme
+colorscheme molokai
 
 " Prettify JSON files
 autocmd BufRead,BufNewFile *.json set filetype=json
