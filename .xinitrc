@@ -7,12 +7,12 @@ fi
 
 ### DWM BAR CONFIG
 ### BEGIN BAR
-#while xsetroot -name "$(free -m | awk '/cache:/ { print $3"MB" }')  Vol:$(amixer get Master | tail -1 | awk '{ print $5 }' | tr -d '[]')  Batt:$(acpi | awk '{print $4 }' | tr -d ',')  $(date +%R)"
-#    do
-#        sleep 1
-#    done &
-#
-### END BAR
+while xsetroot -name "$(free -m | awk '/cache:/ { print $3"MB" }')  Vol:$(amixer get Master | tail -1 | awk '{ print $5 }' | tr -d '[]')  Batt:$(acpi | awk '{print $4 }' | tr -d ',')  $(date +%R)"
+    do
+        sleep 1
+    done &
+
+### DWM END BAR
 
 
 #### BSPWM STUFF
@@ -49,12 +49,18 @@ xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Middle Button Timeout" 50
 
 # Set Xresources to be sourced
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+xset +fp /usr/share/fonts/local/
+
+### STARTUP - if an WM like i3 does not do it
+exec wicd-gtk --tray &
+exec dropboxd &
+exec nitrogen --restore &
 
 ### EXEC
 #exec startkde
 #sxhkd &
 #exec bspwm
 #exec startlxde
-exec i3
+#exec i3
 #exec startxfce4
-#exec dwm
+exec dwm
