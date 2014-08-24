@@ -16,11 +16,15 @@ alias findmove="find -mindepth 2 -type f -print -exec mv {} . \;"
 alias kc="ssh stefan@88.198.125.126"
 alias syncinfo="watch -n 0.5 grep -e Dirty: -e Writeback: /proc/meminfo"
 alias jd="nohup ~/jd.sh & > /dev/null"
-alias ls='ls --color=auto -Fhx --group-directories-first '
+alias ls="ls --color=auto -Fhx --group-directories-first"
+alias l="ls -l"
+alias ll="ls -la"
 alias fb='nohup java -jar ~/FileBot_4.1.jar & > /dev/null'
 alias flux="~/xflux -l 51.06166 -g 6.91658"
 alias ddinfo="sudo watch -n 1 killall -USR1 dd"
 alias rshift="nohup redshift -l  51.1:6.9 -t 5700:3300 -m randr & > /dev/null"
+#alias p ="ps -aux"
+alias -g G="| grepr"
 
 function lto() {
     latex $1.tex
@@ -67,7 +71,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git common-aliases compleat yum)
+plugins=(compleat yum)
 
 source $ZSH/oh-my-zsh.sh
 

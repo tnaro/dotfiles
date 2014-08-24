@@ -61,6 +61,6 @@ exec nitrogen --restore &
 #sxhkd &
 #exec bspwm
 #exec startlxde
-#exec i3
-exec startxfce4
+exec i3
+#exec startxfce4
 #exec dwm
