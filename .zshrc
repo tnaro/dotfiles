@@ -19,12 +19,13 @@ alias jd="nohup ~/jd.sh & > /dev/null"
 alias ls="ls --color=auto -Fhx --group-directories-first"
 alias l="ls -l"
 alias ll="ls -la"
-alias fb='nohup java -jar ~/FileBot_4.1.jar & > /dev/null'
+alias fb='nohup java -jar ~/FileBot_4.2.jar & > /dev/null'
 alias flux="~/xflux -l 51.06166 -g 6.91658"
 alias ddinfo="sudo watch -n 1 killall -USR1 dd"
 alias rshift="nohup redshift -l  51.1:6.9 -t 5700:3300 -m randr & > /dev/null"
 #alias p ="ps -aux"
-alias -g G="| grepr"
+alias -g G="| grep -i"
+alias p="ps aux"
 
 function lto() {
     latex $1.tex
